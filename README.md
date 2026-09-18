@@ -226,4 +226,4 @@ NameScope intentionally adds per-platform delays and stops a scan after a clear 
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT [LICENSE](LICENSE). |
