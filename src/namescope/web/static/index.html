@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate and check username candidates across GitHub, Instagram, and Telegram.">
+  <title>NameScope</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#quick" data-view-link="quick" aria-label="NameScope home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NameScope</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-link active" type="button" data-view="quick">Quick Check</button>
+      <button class="nav-link" type="button" data-view="github">GitHub</button>
+      <button class="nav-link" type="button" data-view="instagram">Instagram</button>
+      <button class="nav-link" type="button" data-view="telegram">Telegram</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section id="quick" class="view active" aria-labelledby="quick-title">
+      <div class="hero">
+        <p class="eyebrow">ONE NAME · THREE PLATFORMS</p>
+        <h1 id="quick-title">Check a handle before you commit to it.</h1>
+        <p class="lede">NameScope validates a username against each platform's format rules, then checks the strongest public signal available.</p>
+      </div>
+
+      <form id="quick-form" class="search-pill">
+        <div class="search-segment grow">
+          <label for="quick-username">Username</label>
+          <input id="quick-username" name="username" autocomplete="off" spellcheck="false" placeholder="e.g. qzxlab" required>
+        </div>
+        <label class="inline-option" for="quick-force">
+          <input id="quick-force" type="checkbox">
+          <span>Fresh check</span>
+        </label>
+        <button class="search-button" type="submit">Check</button>
+      </form>
+
+      <div id="quick-message" class="message hidden" role="status"></div>
+      <div id="quick-results" class="platform-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="github" class="view platform-view" data-platform="github"></section>
+    <section id="instagram" class="view platform-view" data-platform="instagram"></section>
+    <section id="telegram" class="view platform-view" data-platform="telegram"></section>
+  </main>
+
+  <footer>
+    Availability can change at any time. Verify a candidate on the platform before relying on it.
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+app:
+  host: "127.0.0.1"
+  port: 8765
+  reload: false
+  open_browser: true
+  allow_remote: false
+  log_level: "INFO"
+  database_path: "data/namescope.sqlite3"
+  max_active_jobs: 3
+  max_finished_jobs: 100
+
+platforms:
+  github:
+    delay_seconds: 0.35
+    timeout_seconds: 10
+    cache_ttl_seconds: 900
+  instagram:
+    delay_seconds: 1.0
+    timeout_seconds: 12
+    cache_ttl_seconds: 600
+  telegram:
+    delay_seconds: 0.8
+    timeout_seconds: 10
+    cache_ttl_seconds: 600
